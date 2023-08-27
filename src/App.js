@@ -11,12 +11,11 @@ function App() {
   useEffect(() => {
     let savedTodo = JSON.parse(localStorage.getItem('todolist'));
     if (savedTodo) {
-      {
-        console.log(savedTodo);
-        setTodos(savedTodo.filter(item => item.completedOn === undefined));
 
-        setCompletedTodos(savedTodo.filter(item => item.completedOn !== undefined))
-      }
+      setTodos(savedTodo.filter(item => item.completedOn === undefined));
+
+      setCompletedTodos(savedTodo.filter(item => item.completedOn !== undefined))
+
     }
   }, []);
 
